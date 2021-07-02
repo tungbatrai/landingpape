@@ -67,6 +67,9 @@ function Body() {
         <p className="testimonial-title-2 text-left">
           Designer, co-Founder at Nirvana Tech
         </p>
+        <div>
+          {num}
+        </div>
       </div>
 
       <div className="col-1"></div>
