@@ -1,6 +1,7 @@
 import Header from "./Header/Header";
 import Body from "./Body/Body";
 import Footer from "./Footer";
+import "./Landdingpage.scss"
 function LanddingPage() {
   
   return (
@@ -8,8 +9,9 @@ function LanddingPage() {
        <Header></Header>
       <div className="container">
         <Body></Body>
-      </div> */
-      {/* <Footer></Footer> */}
+        <Footer></Footer> 
+      </div> 
+      
     </div>
   );
 }

@@ -15,7 +15,8 @@ function Header() {
       infinite: true,
       speed: 500,
       slidesToShow: 5,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      arrows :false
     }
   return (
     <div>
