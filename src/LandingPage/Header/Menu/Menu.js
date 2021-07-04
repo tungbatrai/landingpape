@@ -16,7 +16,7 @@ function Menu() {
           <Navbar.Collapse id="basic-navbar-nav ">
             <div className="row w-100 d-flex align-items-center">
               <div className="col-3"></div>
-              <div className="col-7">
+              <div className="col-7 ">
                 <Nav className="me-auto">
                   <Nav.Link href="#home" active>Home</Nav.Link>
                   <Nav.Link href="#link">How it works</Nav.Link>
@@ -25,7 +25,7 @@ function Menu() {
                   <Nav.Link href="#link3">FAQs</Nav.Link>
                 </Nav>
               </div>
-              <div className="col-2 btn btn-primary menu-button" ><div className="button-content">Get started</div></div>
+              <div className="col-lg-2 col-sm-12  col-8 btn btn-primary menu-button" ><div className="button-content">Get started</div></div>
             </div>
           </Navbar.Collapse>
         </Container>

@@ -1,9 +1,10 @@
 import Slider from "react-slick";
 import React from "react";
 import "./Footer.scss";
-import facebook from "../assect/facebook.png"
-import twitter from "../assect/twitter.png"
-import instagram from "../assect/instagram.png"
+import facebook from "../assect/facebook.png";
+import twitter from "../assect/twitter.png";
+import instagram from "../assect/instagram.png";
+//const instagram =  require("../assect/instagram.png")
 function Footer() {
   return (
     <div id="footer">
@@ -54,7 +55,7 @@ function Footer() {
             +214556905345
           </p>
           <p>
-            <i className="fas fa-envelope text-warning"></i>{" "}
+            <i className="fas fa-envelope text-warning"></i>
             &nbsp;something@email.com
           </p>
           <p>
@@ -63,16 +64,32 @@ function Footer() {
           </p>
         </div>
       </div>
-      <dir className="social-network text-center">
-        <span><img src={facebook} alt="" /></span>
-        <span><img src={twitter} alt="" /></span>
-        <span><img src={instagram} alt="" /></span>
-      </dir>
-      <div>
-      All rights Reserved <strong><i className="far fa-copyright"></i></strong>Your Company, 2021 
+      <div className="social-network text-center">
+        <span>
+          <img src={facebook} alt="" />
+        </span>
+        <span>
+          <img src={twitter} alt="" />
+        </span>
+        <span>
+          <img src={instagram} alt="" />
+        </span>
       </div>
-      <div>
-      <i class="fas fa-heart"></i>
+      <div className="row  footer-end pb-2">
+        <div className="col-4 footer-end-left">
+          <span  className=" footer-end-left-content1">All rights Reserved  <i className="far fa-copyright"></i> </span>
+         
+          <span  className=" footer-end-left-content2">Your Company, 2021</span>
+        </div>
+        <div className="col-4"></div>
+        <div className="col-4 footer-end-right">
+          <span className="footer-end-right-content1">
+            Made with
+            <i className="fas fa-heart pl-1 pr-1"></i> by
+          </span>
+          &nbsp;
+          <span className="footer-end-right-content2">Themewagon</span>
+        </div>
       </div>
     </div>
   );

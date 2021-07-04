@@ -34,35 +34,36 @@ function Body() {
 
   return (
     <div id="body">
+    
       <p className="content container">
         Commercial product photography agency <br /> praised by over 5,000
         brands.
       </p>
       <div className=" row w-100 ml-0 mr-0 logo-pro d-flex justify-content-between  top104 w-100 container">
-        <div className="col-2 w-100">
+        <div className="col-md-2 col-4 w-100">
           <img src={netflix} alt="" />
         </div>
-        <div className="col-2 w-100">
+        <div className="col-md-2 col-4 w-100">
           <img src={facebook} alt="" />
         </div>
-        <div className="col-2 w-100">
+        <div className="col-md-2 col-4 w-100">
           <img src={freelancer} alt="" />
         </div>
-        <div className="col-2 w-100">
+        <div className="col-md-2  col-4 w-100">
           <img src={mailbluster} alt="" />
         </div>
-        <div className="col-2 w-100">
+        <div className="col-md-2 col-4 w-100">
           <img src={themewagon} alt="" />
         </div>
       </div>
       <hr className="top104" />
-
       <div className=" content top104 ">
         <p> How it happens</p>
         <h1 className="header-body-two">You deliver-We Click</h1>
       </div>
+
       <div className="row three-content ">
-        <div className="col-4  ">
+        <div className="col-sm-4  ">
           <div className="d-flex justify-content-center">
             <div className="circle-color-1">
               <div className="circle-one pt-2">1</div>
@@ -71,12 +72,12 @@ function Body() {
           <h4 className="two-content-1 d-flex justify-content-center">
             Inform us about your product
           </h4>
-          <p>
+          <p className="three-content-body">
             Introduce your product, select through the pricing plan and let us
             know if you have any references in mind
           </p>
         </div>
-        <div className="col-4  ">
+        <div className="col-sm-4  ">
           <div className="d-flex justify-content-center">
             <div className="circle-color-2">
               <div className="circle-two pt-2">2</div>
@@ -85,12 +86,12 @@ function Body() {
           <h4 className="two-content-2 d-flex justify-content-center">
             Inform us about your product
           </h4>
-          <p>
-            Introduce your product, select through the pricing plan and let us
-            know if you have any references in mind
+          <p className="three-content-body">
+            Deliver the sujects at our doorstep, we will click perfect shots in
+            no time and make it online ready
           </p>
         </div>
-        <div className="col-4  ">
+        <div className="col-sm-4  ">
           <div className="d-flex justify-content-center">
             <div className="circle-color-3 ">
               <div className="circle-three pt-2">3</div>
@@ -100,14 +101,16 @@ function Body() {
             Inform us about your product
           </h4>
           <p className="three-content-body">
-            Introduce your product, select through the pricing plan and let us
-            know if you have any references in mind
+            After the photoshoot, you will get to review the shots and let us
+            know if there any modification needed.
           </p>
         </div>
       </div>
+    
       <div className="top104">
         <hr />
       </div>
+      {/* slide */}
       <div className="content-testimonial top104">
         <Slider
           nextArrow={<Arrow type="next" />}
@@ -116,6 +119,7 @@ function Body() {
           {renderSlides()}
         </Slider>
       </div>
+      
       <div className="content-packages top104 bottom104">
         <h1 className="header-packages">Our Packages</h1>
         <div className="row body-packages">
@@ -125,7 +129,7 @@ function Body() {
             </div>
             <h2 className="monney-packges-1"> $9</h2>
             <div className="title-packages-1"> / per image</div>
-            <p className="check-content-packages">
+            <div className="check-content-packages">
               <p>
                 <img src={checkCircle} alt="" /> High quality images
               </p>
@@ -142,7 +146,7 @@ function Body() {
               <p>
                 <img src={checkCircle} alt="" /> Free return shipment
               </p>
-            </p>
+            </div>
             <div className="top48">
               <div className="btn btn-outline-primary choose-pan-1 ">
                 Choose plan
@@ -155,7 +159,7 @@ function Body() {
             </div>
             <h2 className="monney-packges-2"> $9</h2>
             <div className="title-packages-2"> / per image</div>
-            <p className="  check-content-packages">
+            <div className="  check-content-packages">
               <p>
                 <img src={checkCircle} alt="" /> High quality images
               </p>
@@ -172,7 +176,7 @@ function Body() {
               <p>
                 <img src={checkCircle} alt="" /> Free return shipment
               </p>
-            </p>
+            </div>
             <div className="top48">
               <div className="btn btn-warning  choose-pan-2 ">Choose plan</div>
             </div>
@@ -183,7 +187,7 @@ function Body() {
             </div>
             <h2 className="monney-packges-3"> $9</h2>
             <div className="title-packages-3"> / per image</div>
-            <p className="  check-content-packages">
+            <div className="  check-content-packages">
               <p>
                 <img src={checkCircle} alt="" /> High quality images
               </p>
@@ -200,7 +204,7 @@ function Body() {
               <p>
                 <img src={checkCircle} alt="" /> Free return shipment
               </p>
-            </p>
+            </div>
             <div className="top48">
               <div className="btn btn-outline-success choose-pan-3 pt-2">
                 Choose plan
@@ -208,12 +212,11 @@ function Body() {
             </div>
           </div>
         </div>
-      </div>
-
+      </div> 
+      
       <div>
         <div className="content-shot top104">
           <h1 className="header-content-shot">Over 1,00,000 Photos Shot</h1>
-
           <div>
             <div className="content-shot-slide">
               <h2>Append Dots</h2>
@@ -384,6 +387,8 @@ function Body() {
           </div>
         </div>
       </div>
+      
+      
       <div className="our-services padding65 top104">
         <h1 className="header-our-services">Our services</h1>
         <div className="padding65">
@@ -502,12 +507,13 @@ function Body() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
 export default Body;
 
-const renderSlides = () => {
+function renderSlides ()  {
   const listSlide = [
     {
       img: image,
@@ -527,7 +533,8 @@ const renderSlides = () => {
     },
     {
       img: image,
-      content1: "333333333333adsadsadasd When it comes to both reliability and quality, ",
+      content1:
+        "333333333333adsadsadasd When it comes to both reliability and quality, ",
       content2:
         " is undoubtly one of best services out there. Team was fast and responsible. 5 stars  for them! ",
       contentTitle: "Andrinna Malin",
@@ -536,14 +543,14 @@ const renderSlides = () => {
   ];
   return listSlide.map((item, index) => {
     return (
-      <div>
+      <div> 
         <div className="row mr-0 ml-0">
           <div className="col-5   ">
             <div className=" w-100 text-left">
               <img src={quote} alt="" />
             </div>
             <p className="testimonial-body text-left">
-              {item.content1}
+                  {item.content1}
               <strong className="text-primary">ClickR </strong> {item.content2}
             </p>
             <p className="testimonial-title-1 text-left">
@@ -560,7 +567,8 @@ const renderSlides = () => {
             <img src={item.img} alt="" className="w-100" />
           </div>
         </div>
-      </div>
+      
+        </div>
     );
   });
 };
