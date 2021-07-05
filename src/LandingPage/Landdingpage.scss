@@ -1,8 +1,8 @@
 $ZO: 0px;
 $XS: 576px;
 $SM: 768px;
-$MD: 992px;
-$XL: 1200px;
+$MD: 991px;
+$XL: 1199px;
 
 // media queries
 
@@ -28,6 +28,10 @@ $XL: 1200px;
       @content;
     }
   }
+}
+.col-0 {
+  width: 0px !important;
+  display: none !important;
 }
 .top104 {
   margin-top: 104px;
@@ -73,8 +77,13 @@ $XL: 1200px;
   margin-top: 48px;
   @extend %robot;
   font-size: 18px;
-
   color: #212121;
+  @include Responsive(SM) {
+    font-size: 13px;
+  }
+  @include Responsive(XS) {
+    font-size: 18px;
+  }
 }
 #header {
   #menu {
@@ -227,6 +236,14 @@ $XL: 1200px;
     }
   }
   .content-testimonial {
+  
+    .quote {
+      img {
+        @include Responsive(MD) {
+          width: 15%;
+        }
+      }
+    }
     .testimonial-body {
       color: #424242;
 
@@ -235,16 +252,29 @@ $XL: 1200px;
       font-weight: bold;
       font-size: 32px;
       line-height: 140%;
+      @include Responsive(XL) {
+        font-size: 25px;
+      }
+      @include Responsive(MD) {
+        font-size: 18px;
+      }
     }
     .testimonial-title-1 {
       @extend %pt-serif;
       font-size: 18px;
       font-weight: 700;
+      @include Responsive(MD) {
+        font-size: 14px;
+      }
     }
     .testimonial-title-2 {
+      margin-bottom: 100px;
       @extend %pt-serif;
       font-size: 18px;
       font-weight: 400;
+      @include Responsive(MD) {
+        font-size: 14px;
+      }
     }
     /* slide 2*/
     .number-slide {
@@ -253,8 +283,34 @@ $XL: 1200px;
       color: #000000;
       position: absolute;
       width: 100%;
-      bottom: 2%;
-      left: -2%;
+      bottom: 5%;
+      left: -9%;
+      @media all and (max-width: 991px) {
+        bottom: 0% !important;
+        background-color: red;
+      }
+      @media all and (max-width: 768px) {
+        bottom: 2% !important;
+        background-color: blue;
+      }
+      @media all and (max-width: 576px) {
+        bottom: 20% !important;
+        background-color: yellowgreen;
+      }
+      @media all and (max-width: 100px) {
+        bottom: 20% !important;
+      }
+      // @include Responsive(XL) {
+      //   bottom: 4%;
+      //   left: -10%;
+      // }
+      // @include Responsive(MD) {
+      //   bottom: 0%;
+     
+      // }
+      // @include Responsive(SM) {
+      //   bottom: 3%;
+      // }
     }
     .arrow {
       position: absolute;
@@ -263,16 +319,41 @@ $XL: 1200px;
       font-weight: bold;
       font-size: 2.5em;
       cursor: pointer;
+     
+      @include Responsive(SM) {
+        bottom: 9%;
+      }
     }
 
     .nextArrow {
-      top: 89%;
+      height: 46px;
+      top: 88%;
       left: 25%;
+      img {
+        margin-top: -25px;
+      }
+     
+      @include Responsive(XS) {
+        top: 32%;
+        left: 49%;
+      }
     }
 
     .prevArrow {
-      top: 89%;
+      height: 46px;
+      top: 88%;
       right: 85%;
+      img {
+        margin-top: -25px;
+      }
+      @include Responsive(XS) {
+        top: 32%;
+        left: 19%;
+      }
+      @include Responsive(XS) {
+        top: 32%;
+        left: 19%;
+      }
     }
   }
   .content-packages {
@@ -282,13 +363,21 @@ $XL: 1200px;
       padding-top: 80px;
       text-align: center;
       color: #212121;
+      @include Responsive(SM) {
+        font-size: 40px;
+      }
     }
     .body-packages {
       margin-top: 61px;
       .content-packages-1 {
         text-align: left;
         background-color: #e6efff;
-
+        @include Responsive(MD) {
+          padding: 20px 10px !important;
+        }
+        @include Responsive(XS) {
+          padding: 30px 45px !important;
+        }
         .lever-packages-1 {
           @extend %pt-serif;
           font-size: 18px;
@@ -323,7 +412,12 @@ $XL: 1200px;
     .content-packages-2 {
       text-align: left;
       background-color: #ffefe6;
-
+      @include Responsive(MD) {
+        padding: 20px 10px !important;
+      }
+      @include Responsive(XS) {
+        padding: 30px 45px !important;
+      }
       .lever-packages-2 {
         @extend %pt-serif;
         font-size: 18px;
@@ -356,7 +450,12 @@ $XL: 1200px;
     .content-packages-3 {
       text-align: left;
       background-color: #e5faed;
-
+      @include Responsive(MD) {
+        padding: 20px 10px !important;
+      }
+      @include Responsive(XS) {
+        padding: 30px 45px !important;
+      }
       .lever-packages-3 {
         @extend %pt-serif;
         font-size: 18px;
@@ -395,9 +494,20 @@ $XL: 1200px;
       font-size: 57px;
       color: #212121;
     }
+
     .content-shot-slide {
       .slide-shot {
         margin-top: 85px;
+        padding-right: 10px;
+        padding-left: 10px;
+        .row {
+          div {
+            padding: 8px 8px 8px 8px;
+            img {
+              width: 100%;
+            }
+          }
+        }
       }
       .slick-active {
         color: #005dff;
@@ -421,10 +531,21 @@ $XL: 1200px;
       width: 20%;
       height: 46px;
       padding: 14px 40px;
-
       border: 1px solid #ff6a00;
       box-sizing: border-box;
       border-radius: 80px;
+      @include Responsive(XL) {
+        width: 30%;
+      }
+      @include Responsive(MD) {
+        width: 40%;
+      }
+      @include Responsive(SM) {
+        width: 50%;
+      }
+      @include Responsive(XS) {
+        width: 70%;
+      }
       &:hover {
         background-color: #ff6a00;
         color: #fff;
@@ -450,17 +571,24 @@ $XL: 1200px;
       @extend %pt-serif;
       font-size: 57px;
       color: #212121;
+      @include Responsive(SM) {
+        font-size: 40px;
+      }
     }
     .our-services-1 {
       background-color: #e6efff;
       border-radius: 16px;
       .image-our-service-1 {
-        // padding-left: 70px;
+        img {
+          width: 100%;
+        }
       }
       .content-our-service-1 {
-        //background-color: yellowgreen;
         text-align: left;
         padding: 26px 8% 26px 15%;
+        @include Responsive(MD) {
+          padding: 5px;
+        }
       }
       h5 {
         color: #005dff;
@@ -484,11 +612,18 @@ $XL: 1200px;
       margin-top: 16px;
       background: #e5faed;
       border-radius: 16px;
-
+      .image-our-service-2 {
+        img {
+          width: 100%;
+        }
+      }
       .content-our-service-2 {
         //background-color: yellowgreen;
         text-align: left;
         padding: 26px 8% 26px 15%;
+        @include Responsive(MD) {
+          padding: 5px;
+        }
       }
       h5 {
         color: #005dff;
@@ -510,11 +645,20 @@ $XL: 1200px;
     }
   }
   .faq {
-    @extend %pt-serif;
-    font-size: 57px;
-    color: #212121;
+    h1 {
+      @extend %pt-serif;
+      font-size: 57px;
+      color: #212121;
+      @include Responsive(SM) {
+        font-size: 40px;
+      }
+    }
     .col-left {
       border-right: 1px solid #eeeeee;
+      @include Responsive(MD) {
+        border-right: none;
+        padding: 15px 15px !important;
+      }
     }
     .car-faq {
       text-align: left;
@@ -538,6 +682,9 @@ $XL: 1200px;
     }
     .col-right {
       padding-left: 52px;
+      @include Responsive(MD) {
+        padding: 15px 15px !important;
+      }
     }
     .faq4 {
       color: #ff6a00;
@@ -558,6 +705,11 @@ $XL: 1200px;
 
 #footer {
   .five-col-footer {
+    .row {
+      div {
+        padding-left: 50px;
+      }
+    }
     h6 {
       @extend %pt-serif;
       margin-bottom: 24px;
@@ -569,6 +721,9 @@ $XL: 1200px;
     }
   }
   .contact {
+    @include Responsive(XS) {
+      padding-left: 50px;
+    }
     h6 {
       @extend %pt-serif;
       margin-bottom: 24px;
@@ -605,6 +760,9 @@ $XL: 1200px;
 
     .footer-end-right {
       text-align: right;
+      @include Responsive(SM) {
+        text-align: left;
+      }
       .footer-end-right-content1 {
         @extend %pt-serif;
         font-weight: normal;

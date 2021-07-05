@@ -26,15 +26,17 @@ function Body() {
     const char = props.type === "next" ? arrowRight : arrowLeft;
 
     return (
-      <span className={className} onClick={props.onClick}>
-        <img src={char} alt="" />
-      </span>
+      <div className={className} onClick={props.onClick}>
+        <img src={char} alt="" onClick={Atest()} />
+      </div>
     );
+  }
+  function Atest() {
+    console.log("a");
   }
 
   return (
     <div id="body">
-    
       <p className="content container">
         Commercial product photography agency <br /> praised by over 5,000
         brands.
@@ -106,24 +108,25 @@ function Body() {
           </p>
         </div>
       </div>
-    
+
       <div className="top104">
         <hr />
       </div>
-      {/* slide */}
+      {/* slide 2 */}
       <div className="content-testimonial top104">
         <Slider
-          nextArrow={<Arrow type="next" />}
           prevArrow={<Arrow type="prev" />}
+          nextArrow={<Arrow type="next" />}
+          
         >
           {renderSlides()}
         </Slider>
       </div>
-      
+
       <div className="content-packages top104 bottom104">
         <h1 className="header-packages">Our Packages</h1>
         <div className="row body-packages">
-          <div className="col-4  content-packages-1 p-5">
+          <div className="col-sm-4  content-packages-1 p-5">
             <div className="lever-packages-1 ">
               <div>Basic</div>
             </div>
@@ -153,7 +156,7 @@ function Body() {
               </div>
             </div>
           </div>
-          <div className="col-4 content-packages-2 p-5">
+          <div className="col-sm-4 content-packages-2 p-5">
             <div className="lever-packages-2 ">
               <div>Basic</div>
             </div>
@@ -181,7 +184,7 @@ function Body() {
               <div className="btn btn-warning  choose-pan-2 ">Choose plan</div>
             </div>
           </div>
-          <div className="col-4 content-packages-3 p-5">
+          <div className="col-sm-4 content-packages-3 p-5">
             <div className="lever-packages-3 ">
               <div>Basic</div>
             </div>
@@ -212,8 +215,8 @@ function Body() {
             </div>
           </div>
         </div>
-      </div> 
-      
+      </div>
+
       <div>
         <div className="content-shot top104">
           <h1 className="header-content-shot">Over 1,00,000 Photos Shot</h1>
@@ -221,162 +224,7 @@ function Body() {
             <div className="content-shot-slide">
               <h2>Append Dots</h2>
               <Slider {...photoShot}>
-                <div>
-                  <div className="slide-shot">
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe1} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe2} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe3} alt="" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe4} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe5} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe6} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="slide-shot">
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe1} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe2} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe3} alt="" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe4} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe5} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe6} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="slide-shot">
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe1} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe2} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe3} alt="" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe4} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe5} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe6} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="slide-shot">
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe1} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe2} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe3} alt="" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe4} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe5} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe6} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="slide-shot">
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe1} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe2} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe3} alt="" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe4} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe5} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe6} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="slide-shot">
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe1} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe2} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe3} alt="" />
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-4">
-                        <img src={shoe4} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe5} alt="" />
-                      </div>
-                      <div className="col-4">
-                        <img src={shoe6} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {getDataPhotoShot()}
               </Slider>
             </div>
           </div>
@@ -387,17 +235,16 @@ function Body() {
           </div>
         </div>
       </div>
-      
-      
+
       <div className="our-services padding65 top104">
         <h1 className="header-our-services">Our services</h1>
         <div className="padding65">
           <div className="our-services-1">
             <div className="row">
-              <div className="col-4 image-our-service-1 pl-4">
+              <div className="col-md-4 col-12 image-our-service-1 pl-4">
                 <img src={imageurServices1} alt="" />
               </div>
-              <div className="col-8 content-our-service-1">
+              <div className="col-md-8 col-12 content-our-service-1">
                 <div className="p-4 ">
                   <h5>Photo Preview</h5>
                   <p>
@@ -419,7 +266,7 @@ function Body() {
           </div>
           <div className="our-services-2">
             <div className="row">
-              <div className="col-8 content-our-service-2">
+              <div className="col-md-8 col-12 content-our-service-2">
                 <div className="p-4 ">
                   <h5>Photo Preview</h5>
                   <p>
@@ -437,7 +284,7 @@ function Body() {
                   </div>
                 </div>
               </div>
-              <div className="col-4 ">
+              <div className="col-md-4 col-12 image-our-service-2 ">
                 <img src={imageurServices2} alt="" />
               </div>
             </div>
@@ -447,7 +294,7 @@ function Body() {
       <div className="faq top104">
         <h1>FAQ</h1>
         <div className="row padding65">
-          <div className="col-6 pr-5 col-left">
+          <div className="col-md-6 pr-5 col-left">
             <div className="car-faq">
               <h5 className="faq1"> What's the turnabout time?</h5>
               <p className="content-faq">
@@ -476,7 +323,7 @@ function Body() {
               </p>
             </div>
           </div>
-          <div className="col-6 pr-5 col-right">
+          <div className="col-md-6 pr-5 col-right">
             <div className="car-faq">
               <h5 className="faq4"> What's the turnabout time?</h5>
               <p className="content-faq">
@@ -507,13 +354,12 @@ function Body() {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }
 export default Body;
-
-function renderSlides ()  {
+//slide 1
+function renderSlides() {
   const listSlide = [
     {
       img: image,
@@ -525,7 +371,7 @@ function renderSlides ()  {
     },
     {
       img: image,
-      content1: "22adsadsadasd When it comes to both reliability and quality, ",
+      content1: "2 When it comes to both reliability and quality, ",
       content2:
         " is undoubtly one of best services out there. Team was fast and responsible. 5 stars  for them! ",
       contentTitle: "Andrinna Malin",
@@ -534,7 +380,7 @@ function renderSlides ()  {
     {
       img: image,
       content1:
-        "333333333333adsadsadasd When it comes to both reliability and quality, ",
+        "3When it comes to both reliability and quality, ",
       content2:
         " is undoubtly one of best services out there. Team was fast and responsible. 5 stars  for them! ",
       contentTitle: "Andrinna Malin",
@@ -543,42 +389,128 @@ function renderSlides ()  {
   ];
   return listSlide.map((item, index) => {
     return (
-      <div> 
+      <div>
         <div className="row mr-0 ml-0">
-          <div className="col-5   ">
-            <div className=" w-100 text-left">
+          <div className="col-xl-5  col-sm-6  pr-0">
+            <div className=" w-100 text-left quote">
               <img src={quote} alt="" />
             </div>
             <p className="testimonial-body text-left">
-                  {item.content1}
+              {item.content1}
               <strong className="text-primary">ClickR </strong> {item.content2}
             </p>
             <p className="testimonial-title-1 text-left">
               <strong>{item.contentTitle}</strong>
             </p>
             <p className="testimonial-title-2 text-left">{item.designer}</p>
-            <div className="number-slide">
-              {index + 1} of {index}
+            <div className="number-slide ">
+              {index + 1} of {listSlide.length}
             </div>
           </div>
 
-          <div className="col-1"></div>
-          <div className="col-6 ">
+          <div className="  col-0 col-sm-1"></div>
+          <div className="col-sm-6  ">
             <img src={item.img} alt="" className="w-100" />
           </div>
         </div>
-      
-        </div>
+      </div>
     );
   });
-};
+}
+//slide 3
+function getDataPhotoShot() {
+  const dataPhotoShot = [
+    {
+      Name: "Foot",
+      imagePhotoShot1: shoe1,
+      imagePhotoShot2: shoe2,
+      imagePhotoShot3: shoe3,
+      imagePhotoShot4: shoe4,
+      imagePhotoShot5: shoe5,
+      imagePhotoShot6: shoe6,
+    },
+    {
+      Name: "Shoe",
+      imagePhotoShot1: shoe2,
+      imagePhotoShot2: shoe2,
+      imagePhotoShot3: shoe2,
+      imagePhotoShot4: shoe2,
+      imagePhotoShot5: shoe2,
+      imagePhotoShot6: shoe2,
+    },
+    {
+      Name: "Wathches",
+      imagePhotoShot1: shoe3,
+      imagePhotoShot2: shoe3,
+      imagePhotoShot3: shoe3,
+      imagePhotoShot4: shoe3,
+      imagePhotoShot5: shoe3,
+      imagePhotoShot6: shoe3,
+    },
+    {
+      Name: "Cosmetics",
+      imagePhotoShot1: shoe4,
+      imagePhotoShot2: shoe4,
+      imagePhotoShot3: shoe4,
+      imagePhotoShot4: shoe4,
+      imagePhotoShot5: shoe4,
+      imagePhotoShot6: shoe4,
+    },
+    {
+      Name: "Phone",
+      imagePhotoShot1: shoe5,
+      imagePhotoShot2: shoe5,
+      imagePhotoShot3: shoe5,
+      imagePhotoShot4: shoe5,
+      imagePhotoShot5: shoe5,
+      imagePhotoShot6: shoe5,
+    },
+    {
+      Name: "Camera",
+      imagePhotoShot1: shoe6,
+      imagePhotoShot2: shoe6,
+      imagePhotoShot3: shoe6,
+      imagePhotoShot4: shoe6,
+      imagePhotoShot5: shoe6,
+      imagePhotoShot6: shoe6,
+    },
+  ];
+  return dataPhotoShot.map((item, index) => {
+    return (
+      <div >
+        <div className="slide-shot">
+          <div className="row">
+            <div className="col-xl-4 col-md-6 ">
+              <img src={item.imagePhotoShot1} alt="" />
+            </div>
+            <div className="col-xl-4  col-md-6">
+              <img src={item.imagePhotoShot2} alt="" />
+            </div>
+            <div className="col-xl-4  col-md-6 ">
+              <img src={item.imagePhotoShot3}  alt="" />
+            </div>
 
+            <div className="col-xl-4  col-md-6">
+              <img src={item.imagePhotoShot4} alt="" />
+            </div>
+            <div className="col-xl-4  col-md-6">
+              <img src={item.imagePhotoShot5} alt="" />
+            </div>
+            <div className="col-xl-4  col-md-6">
+              <img src={item.imagePhotoShot6} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  });
+}
 const photoShot = {
-  dots: true,
   infinite: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
+
   customPaging: function (i) {
     const menuPhotoShot = [
       "Foot",
@@ -588,6 +520,6 @@ const photoShot = {
       "Phone",
       "Camera",
     ];
-    return <a>{menuPhotoShot[i + 1]}</a>;
+    return <div>{menuPhotoShot[i + 1]}</div>;
   },
 };
